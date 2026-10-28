@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mariyam Pangarkar</title>
-<meta name="description" content="Mariyam Pangarkar, AI engineer building LLM agents and RAG systems for fintech. Projects, experience and contact.">
+<meta name="description" content="Mariyam Pangarkar, AI engineer building LLM agents, RAG systems and full-stack products. Projects, experience and contact.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -52,6 +52,7 @@ h2{font:700 30px/1.1 Fraunces,Georgia,serif;margin:0 0 8px;letter-spacing:-.01em
 .sub{color:var(--muted);margin:0 0 30px}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card.wide{grid-column:span 2}
 .card.feature{grid-column:span 2;display:grid;grid-template-columns:1.2fr 1fr;gap:26px}
 .tag{align-self:flex-start;font:600 11px "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.06em;padding:4px 9px;border-radius:999px}
 .tag.live{background:var(--accent-soft);color:var(--accent)}
@@ -81,6 +82,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
   .hero{grid-template-columns:1fr;padding-top:24px;gap:32px}
   .grid{grid-template-columns:1fr}
   .card.feature{grid-column:auto;grid-template-columns:1fr}
+  .card.wide{grid-column:auto}
   .skills{grid-template-columns:1fr 1fr}
   .timeline li{grid-template-columns:1fr;gap:4px}
   nav ul{gap:14px}
@@ -103,9 +105,9 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
 
   <header class="hero">
     <div>
-      <div class="eyebrow">AI Engineer · Fintech · Dubai</div>
-      <h1>I build LLM agents that do <em>real work</em> in finance.</h1>
-      <p class="lede">3.5 years shipping production software in fintech, payments and insurance. Most recently I built LangGraph agents for trade screening and compliance, and before that an LLM support assistant at Zerodha's Quicko. I like systems that are measured, verified and boring to operate.</p>
+      <div class="eyebrow">AI Engineer · Full Stack · Dubai</div>
+      <h1>I build AI agents that do <em>real work</em>.</h1>
+      <p class="lede">3.5 years shipping production software across fintech, sports tech and insurance. Recently I built LangGraph agents for trade screening, HAL-AI (a sports intelligence engine) and an LLM support assistant at Zerodha's Quicko. I like systems that are measured, verified and boring to operate.</p>
       <div class="cta">
         <a class="btn primary" href="#work">See projects</a>
         <a class="btn" href="https://github.com/mariyampangarkar19">GitHub</a>
@@ -120,7 +122,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
 
   <section id="work">
     <h2>Projects</h2>
-    <p class="sub">One in daily use, three in progress. Each repo shows its current status.</p>
+    <p class="sub">Things I have built and run. More on the way.</p>
     <div class="grid">
       <article class="card feature">
         <div style="display:flex;flex-direction:column;gap:10px">
@@ -137,31 +139,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
         </div>
       </article>
 
-      <article class="card">
-        <span class="tag wip">In progress</span>
-        <h3>Transaction Screening Agent</h3>
-        <p>A LangGraph agent that screens transactions and KYC profiles against sanctions and risk rules, explains each decision, and is measured against a labelled evaluation set.</p>
-        <div class="progress" aria-label="Progress: planning"><i style="width:10%"></i></div>
-        <div class="stack"><span>LangGraph</span><span>Python</span><span>Evals</span><span>FastAPI</span></div>
-      </article>
-
-      <article class="card">
-        <span class="tag wip">In progress</span>
-        <h3>Financial Docs RAG, with evals</h3>
-        <p>Question answering over company filings and support docs, with retrieval and answer accuracy tracked on every change, so improvements are numbers rather than guesses.</p>
-        <div class="progress" aria-label="Progress: planning"><i style="width:10%"></i></div>
-        <div class="stack"><span>RAG</span><span>Vector search</span><span>LangChain</span><span>Ragas</span></div>
-      </article>
-
-      <article class="card">
-        <span class="tag wip">In progress</span>
-        <h3>Market Data Pipeline + LLM Briefs</h3>
-        <p>Streaming market data into a clean warehouse, with an LLM layer that writes a daily brief on what moved and why, citing the underlying data.</p>
-        <div class="progress" aria-label="Progress: planning"><i style="width:10%"></i></div>
-        <div class="stack"><span>Python</span><span>PostgreSQL</span><span>AWS</span><span>LLMs</span></div>
-      </article>
-
-      <article class="card">
+      <article class="card wide">
         <span class="tag live">Shipped at work</span>
         <h3>HAL-AI and a production RAG chatbot</h3>
         <p>At ShareMatch I built HAL-AI, a sports intelligence engine, and upgraded the platform's RAG chatbot with LangChain, LangGraph and ChromaDB. The code is private to the company.</p>
@@ -172,7 +150,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
 
   <section id="experience">
     <h2>Experience</h2>
-    <p class="sub">Fintech, payments, trading and insurance.</p>
+    <p class="sub">Fintech, sports tech, trading and insurance.</p>
     <ul class="timeline">
       <li><div class="when">Nov 2025 – Jul 2026</div><div><h3>ShareMatch · Technical Analyst (AI & Engineering Lead)</h3><p>Led a team of 3 developers. Shipped LangGraph agents for trade screening and compliance, and built backend flows for Solana wallets, payments and on-chain settlement.</p></div></li>
       <li><div class="when">Oct 2024 – Aug 2025</div><div><h3>Quicko (by Zerodha) · Full Stack Developer</h3><p>Built an LLM support assistant, migrated 100K+ accounts from DynamoDB to OpenSearch with zero data loss, and shipped 4 end-to-end features on AWS Lambda.</p></div></li>
