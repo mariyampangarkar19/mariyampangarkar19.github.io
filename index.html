@@ -69,6 +69,10 @@ h2{font:700 30px/1.1 Fraunces,Georgia,serif;margin:0 0 8px;letter-spacing:-.01em
 .card p{margin:0;color:var(--muted)}
 .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
 .stack span{font:12px "JetBrains Mono",monospace;padding:3px 8px;border:1px solid var(--line);border-radius:6px;color:var(--muted)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.trio .item{display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--accent);padding-top:14px}
+.trio h4{margin:0;font:600 16px/1.3 Inter,sans-serif}
+.trio p{font-size:15px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-content:center}
 .stat{border-left:2px solid var(--accent);padding-left:12px}
 .stat b{display:block;font:700 28px Fraunces,serif}
@@ -91,6 +95,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
   .grid{grid-template-columns:1fr}
   .card.feature{grid-column:auto;grid-template-columns:1fr}
   .card.wide{grid-column:auto}
+  .trio{grid-template-columns:1fr}
   .skills{grid-template-columns:1fr 1fr}
   .timeline li{grid-template-columns:1fr;gap:4px}
   .exp{grid-template-columns:1fr}
@@ -152,9 +157,25 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
 
       <article class="card wide">
         <span class="tag live">Shipped with my team at work</span>
-        <h3>HAL-AI, a RAG chatbot and an AI test agent</h3>
-        <p>At ShareMatch I worked on our AI features: HAL-AI, a Google-grounded sports-markets analyst, a RAG help chatbot, and a LangGraph agent that writes Playwright tests. The code is private to the company.</p>
-        <div class="stack"><span>Gemini</span><span>RAG</span><span>LangGraph</span><span>ChromaDB</span></div>
+        <h3>HAL-AI: a sports market analyst engine, a FAQ chatbot and an AI test agent</h3>
+        <p>Three AI features I worked on at ShareMatch, a Shariah-compliant sports trading platform. The code is private to the company.</p>
+        <div class="trio">
+          <div class="item">
+            <h4>HAL-AI analyst</h4>
+            <p>A sports-markets analyst users chat with by text or voice, in English and Arabic. It answers from live Google Search results with cited sources, reviews the user's own holdings, quotes real prices from our database rather than the web, and can pre-fill a trade from plain language. Answers stream over SSE, and betting sources are filtered out for Shariah compliance.</p>
+            <div class="stack"><span>Gemini</span><span>Search grounding</span><span>n8n</span><span>Edge Functions</span><span>SSE</span></div>
+          </div>
+          <div class="item">
+            <h4>RAG FAQ chatbot</h4>
+            <p>The platform's help assistant. A fast LLM call first decides whether the user wants a how-to video or an answer. Answers come from retrieval over the FAQ library, with a strict answer-only-from-sources prompt and a filter that keeps logged-in content away from visitors.</p>
+            <div class="stack"><span>RAG</span><span>ChromaDB</span><span>Embeddings</span><span>Llama 3.1</span></div>
+          </div>
+          <div class="item">
+            <h4>AI test agent</h4>
+            <p>A multi-agent pipeline that explores the app in a browser through a LangGraph state graph, ranks features by business risk, then writes, scores and self-heals Playwright tests. What it learns is kept in a vector store and every run is traced.</p>
+            <div class="stack"><span>LangGraph</span><span>Playwright</span><span>LangSmith</span><span>ChromaDB</span></div>
+          </div>
+        </div>
       </article>
     </div>
   </section>
