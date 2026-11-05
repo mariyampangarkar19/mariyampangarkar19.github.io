@@ -130,7 +130,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
         <a class="btn" href="https://linkedin.com/in/mariyam-pangarkar">LinkedIn</a>
       </div>
     </div>
-    <div class="term" aria-label="Animated log of my job search agent running">
+    <div class="term" aria-label="Animated log of Trove, my job-matching pipeline, running">
       <div class="bar"><i></i><i></i><i></i></div>
       <div id="log"></div>
     </div>
@@ -143,16 +143,30 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
       <article class="card feature">
         <div style="display:flex;flex-direction:column;gap:10px">
           <span class="tag live">Live, in daily use</span>
-          <h3>Job Search Agent</h3>
-          <p>A scheduled multi-agent workflow that finds roles across six markets, checks every posting against the company's own ATS API, routes each one to the right resume and keeps a Google Sheet and dashboard in sync with my inbox.</p>
-          <div class="stack"><span>Claude Code</span><span>Sub-agents</span><span>Python</span><span>Google Sheets</span><span>Gmail</span><span>Playwright</span></div>
-          <a href="https://github.com/mariyampangarkar19/job-search-agent">View the repo →</a>
+          <h3>Trove</h3>
+          <p>A scheduled matching pipeline that scores job postings against a skills rubric, checks every posting is still live through the company's own ATS API, and hands me a short ranked list. It never applies to anything: I read every role and decide.</p>
+          <div class="stack"><span>Python</span><span>LLM sub-agents</span><span>Scheduling</span><span>ATS APIs</span><span>Google Sheets</span></div>
+          <a href="https://github.com/mariyampangarkar19/trove">View the repo →</a>
         </div>
         <div class="stats">
-          <div class="stat"><b>230+</b><span>roles shortlisted</span></div>
+          <div class="stat"><b>≤20</b><span>best-fit roles per run</span></div>
           <div class="stat"><b>3×</b><span>runs per weekday</span></div>
           <div class="stat"><b>6</b><span>markets covered</span></div>
         </div>
+      </article>
+
+      <article class="card">
+        <span class="tag wip">Building now</span>
+        <h3>Donna</h3>
+        <p>A personal assistant agent for life admin. It answers questions over your bills, leases and contracts with page citations, turns deadlines into reminders and draft emails, and waits for your approval before anything goes out. Evals cover retrieval accuracy and prompt injection.</p>
+        <div class="stack"><span>RAG</span><span>Tool use</span><span>ChromaDB</span><span>Claude API</span><span>Evals</span></div>
+      </article>
+
+      <article class="card">
+        <span class="tag wip">Building now</span>
+        <h3>The Morning Edition</h3>
+        <p>A team of agents reads my newsletters and writes one newspaper-style edition each morning. Section agents write in parallel, a fact-checker sends back anything its sources don't support, and every claim links to where it came from.</p>
+        <div class="stack"><span>Multi-agent</span><span>LangGraph</span><span>Embeddings</span><span>Scheduling</span><span>Evals</span></div>
       </article>
 
       <article class="card wide">
@@ -224,17 +238,17 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
 </div>
 <script>
 const lines = [
-  ['dim','$ job-search-agent run --market all'],
+  ['dim','$ trove run --market all'],
   ['','› reading search rules'],
   ['','› 3 sub-agents searching UAE · EU · India'],
   ['','› 41 candidate roles found'],
   ['','› verifying links via ATS APIs'],
   ['ok','  ✓ 12 live   ✗ 29 closed or duplicate'],
-  ['','› scoring fit and routing resumes'],
+  ['','› scoring fit against the rubric'],
   ['hl','  ★ Backend Engineer · payments fintech · fit 5'],
   ['hl','  ★ AI Engineer · Dubai · fit 5'],
-  ['','› syncing Google Sheet and inbox'],
-  ['ok','✓ done: 6 roles added']
+  ['','› syncing Google Sheet'],
+  ['ok','✓ done: 6 roles shortlisted for review']
 ];
 const log = document.getElementById('log');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
