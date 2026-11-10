@@ -144,8 +144,8 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:13px}
         <div style="display:flex;flex-direction:column;gap:10px">
           <span class="tag live">Live, in daily use</span>
           <h3>Trove</h3>
-          <p>A scheduled matching pipeline that scores job postings against a skills rubric, checks every posting is still live through the company's own ATS API, and hands me a short ranked list. It never applies to anything: I read every role and decide.</p>
-          <div class="stack"><span>Python</span><span>LLM sub-agents</span><span>Scheduling</span><span>ATS APIs</span><span>Google Sheets</span></div>
+          <p>A scheduled matching pipeline that scores job postings against a skills rubric, checks every posting is still live through the company's own ATS API, and hands me a short ranked list. It routes each role to "apply now" or "referral first", and for big companies it finds a senior contact and drafts a sourced outreach note. It never applies or sends anything: I read every role and every draft and decide.</p>
+          <div class="stack"><span>Python</span><span>LLM sub-agents</span><span>Scheduling</span><span>ATS APIs</span><span>Google Sheets</span><span>Outreach drafting</span></div>
           <a href="https://github.com/mariyampangarkar19/trove">View the repo →</a>
         </div>
         <div class="stats">
@@ -247,8 +247,10 @@ const lines = [
   ['','› scoring fit against the rubric'],
   ['hl','  ★ Backend Engineer · payments fintech · fit 5'],
   ['hl','  ★ AI Engineer · Dubai · fit 5'],
-  ['','› syncing Google Sheet'],
-  ['ok','✓ done: 6 roles shortlisted for review']
+  ['','› routing: 4 apply · 2 referral'],
+  ['','› drafting referral notes'],
+  ['','› syncing Sheet + Outreach tab'],
+  ['ok','✓ done: 6 roles, 2 drafts to review']
 ];
 const log = document.getElementById('log');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
