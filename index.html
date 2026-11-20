@@ -9,12 +9,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* material-style roles: primary blue, secondary yellow, tertiary lavender; navy + grey neutrals */
-  --surface:#f1f0f2; --surface-hi:#faf9f7; --grid:#e0dee4;
-  --navy:#26304a; --grey:#6c7080;
-  --primary:#5d74ad; --on-primary:#faf9f7; --primary-c:#dfe3ef;
-  --yellow:#e3c26e; --yellow-c:#f4ecd4;
-  --lavender:#b3a8d3; --lavender-c:#e9e5f1;
+  /* palette: space cadet, slate gray, tan, coffee, caput mortuum; material-style roles */
+  --surface:#f4efe6; --surface-hi:#fbf8f2; --grid:#e6ddcc;
+  --navy:#25344f; --grey:#5b6577;
+  --primary:#632024; --on-primary:#fbf8f2; --primary-c:#eedada;
+  --tan:#d5b893; --tan-c:#f1e6d4;
+  --slate:#617891; --slate-c:#dfe5ec;
+  --coffee:#6f4d38; --coffee-c:#e9ddd2;
   --line:var(--navy); --shadow:4px 4px 0 var(--navy);
 }
 *{box-sizing:border-box}
@@ -34,7 +35,7 @@ h1,h2,h3,h4,.name,.big,.title,.echo,.stamp b{text-transform:none}
 .topbar{position:sticky;top:0;z-index:20;background:var(--navy);color:var(--surface);border-bottom:2px solid var(--navy)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:46px;gap:12px}
 .topbar .brand{font:700 14px "Space Mono",monospace;text-decoration:none;display:flex;align-items:center;gap:8px}
-.topbar .brand i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 2px var(--navy)}
+.topbar .brand i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--tan);box-shadow:0 0 0 2px var(--navy)}
 .topbar nav{display:flex;gap:18px;font:13px "Space Mono",monospace}
 .topbar nav a{text-decoration:none;opacity:.85}
 .topbar nav a:hover{opacity:1;text-decoration:underline}
@@ -55,22 +56,22 @@ h1,h2,h3,h4,.name,.big,.title,.echo,.stamp b{text-transform:none}
 .kicker{display:inline-block;font:700 12px "Space Mono",monospace;letter-spacing:.12em;text-transform:uppercase;background:var(--navy);color:var(--surface);padding:4px 10px}
 .name{font:400 clamp(52px,10vw,124px)/.92 "Abril Fatface",serif;margin:18px 0 0;letter-spacing:-.01em;color:var(--navy)}
 .name .o{color:var(--primary)}
-.echo{font:400 clamp(30px,6vw,72px)/1 "Abril Fatface",serif;color:transparent;-webkit-text-stroke:1.4px var(--lavender);margin:0;user-select:none;white-space:nowrap;overflow:hidden}
+.echo{font:400 clamp(30px,6vw,72px)/1 "Abril Fatface",serif;color:transparent;-webkit-text-stroke:1.4px var(--slate);margin:0;user-select:none;white-space:nowrap;overflow:hidden}
 .echo:nth-of-type(2){opacity:.75}.echo:nth-of-type(3){opacity:.5}
 .tagline{font:600 clamp(18px,2.3vw,24px)/1.35 Montserrat,sans-serif;margin:18px auto 6px;max-width:30em}
-.tagline em{font-style:normal;background:var(--yellow);padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.tagline em{font-style:normal;background:var(--tan);padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .hand{font:600 26px Caveat,cursive;color:var(--primary);display:inline-block;margin-top:6px}
 .sticker{position:absolute;font:700 12px/1.25 "Space Mono",monospace;text-align:center;border:2px solid var(--navy);box-shadow:var(--shadow);padding:10px 12px;background:var(--surface-hi)}
-.sticker.s1{top:10px;right:4%;background:var(--yellow);border-radius:999px;padding:12px 16px}
-.sticker.s2{bottom:150px;left:0;background:var(--lavender)}
-.star{position:absolute;width:26px;height:26px;color:var(--yellow)}
+.sticker.s1{top:10px;right:4%;background:var(--tan);border-radius:999px;padding:12px 16px}
+.sticker.s2{bottom:150px;left:0;background:var(--slate-c)}
+.star{position:absolute;width:26px;height:26px;color:var(--tan)}
 .star svg{width:100%;height:100%;display:block}
 .cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:24px 0 30px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:2px solid var(--navy);background:var(--surface-hi);font:700 14px Montserrat,sans-serif;text-decoration:none;box-shadow:var(--shadow);transition:transform .12s,box-shadow .12s;border-radius:999px;cursor:pointer;color:var(--navy)}
 .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--navy)}
 .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--navy)}
 .btn.primary{background:var(--primary);color:#fff}
-.btn.mustard{background:var(--yellow)}
+.btn.mustard{background:var(--tan)}
 
 /* dock */
 .dock{background:var(--navy);border-top:2px solid var(--navy);border-bottom:2px solid var(--navy);padding:16px 0}
@@ -78,12 +79,12 @@ h1,h2,h3,h4,.name,.big,.title,.echo,.stamp b{text-transform:none}
 .dock a{width:54px;height:54px;border-radius:12px;border:2px solid var(--navy);box-shadow:3px 3px 0 var(--navy);display:grid;place-items:center;text-decoration:none;transition:transform .15s}
 .dock a:hover{transform:translateY(-4px)}
 .dock svg{width:28px;height:28px}
-.d-li{background:#4d6a9c}.d-gh{background:#3a3f4c}.d-mail{background:var(--primary)}.d-web{background:var(--yellow)}
+.d-li{background:#617891}.d-gh{background:var(--coffee)}.d-mail{background:var(--primary)}.d-web{background:var(--tan)}
 
 /* marquee */
 .marquee{background:var(--navy);color:var(--surface);overflow:hidden;border-bottom:2px solid var(--navy)}
 .marquee .track{display:flex;gap:40px;width:max-content;padding:10px 0;font:700 14px "Space Mono",monospace;letter-spacing:.06em;text-transform:uppercase;animation:slide 38s linear infinite}
-.marquee .track span::after{content:"✦";color:var(--yellow);margin-left:40px}
+.marquee .track span::after{content:"✦";color:var(--tan);margin-left:40px}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* ---------- windows ---------- */
@@ -94,19 +95,19 @@ section{padding:72px 0}
 .titlebar .path{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .titlebar .ctl{display:flex;gap:6px;flex-shrink:0}
 .titlebar button{width:24px;height:22px;border:2px solid var(--navy);border-radius:5px;background:var(--surface);font:700 13px/1 "Space Mono",monospace;cursor:pointer;color:var(--navy);padding:0}
-.titlebar button.x{background:#c98479;color:#fff}
+.titlebar button.x{background:#9b5050;color:#fff}
 .win.min .body{display:none}
 .body{padding:34px}
 .title{font:400 clamp(34px,5vw,54px)/1.02 "Abril Fatface",serif;margin:0 0 8px;color:var(--navy)}
 .title .o{color:var(--primary)}
 .title .dot{color:var(--primary)}
-.wins .title .dot{color:var(--yellow)}
-.contact h2 .dot{color:var(--yellow)}
+.wins .title .dot{color:var(--tan)}
+.contact h2 .dot{color:var(--tan)}
 .lead{color:var(--grey);max-width:40em;margin:0 0 26px}
 
 /* profile */
 .profile{display:grid;grid-template-columns:220px 1fr 280px;gap:34px;align-items:center}
-.avatar{width:200px;height:200px;border-radius:50%;border:2px solid var(--navy);background:var(--yellow);box-shadow:var(--shadow);display:grid;place-items:center;font:400 84px "Abril Fatface",serif;color:var(--navy);position:relative}
+.avatar{width:200px;height:200px;border-radius:50%;border:2px solid var(--navy);background:var(--tan);box-shadow:var(--shadow);display:grid;place-items:center;font:400 84px "Abril Fatface",serif;color:var(--navy);position:relative}
 .avatar::after{content:"photo goes here";position:absolute;bottom:-14px;font:600 20px Caveat,cursive;color:var(--primary);background:var(--surface-hi);padding:0 6px}
 .hi{font:700 22px Montserrat,sans-serif;margin:0}
 .big{font:400 clamp(38px,5vw,58px)/1 "Abril Fatface",serif;color:var(--primary);margin:2px 0 12px}
@@ -116,17 +117,17 @@ section{padding:72px 0}
 .idcard dl{margin:0}
 .idcard dt{font-weight:700;margin-top:8px}
 .idcard dd{margin:0;color:var(--grey);text-transform:lowercase}
-.tape{position:absolute;top:-12px;left:50%;width:90px;height:22px;background:rgba(227,194,110,.8);transform:translateX(-50%)}
+.tape{position:absolute;top:-12px;left:50%;width:90px;height:22px;background:rgba(213,184,147,.85);transform:translateX(-50%)}
 
 /* package */
 .pack{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .pack .p{border:2px solid var(--navy);border-radius:10px;padding:22px;box-shadow:var(--shadow);position:relative}
 .pack .p:nth-child(1){background:var(--primary);color:var(--on-primary)}
-.pack .p:nth-child(1) h3{color:var(--on-primary)}.pack .p:nth-child(1) .dot{color:var(--yellow)}
-.pack .p:nth-child(2){background:var(--yellow);color:var(--navy)}
+.pack .p:nth-child(1) h3{color:var(--on-primary)}.pack .p:nth-child(1) .dot{color:var(--tan)}
+.pack .p:nth-child(2){background:var(--tan);color:var(--navy)}
 .pack .p:nth-child(2) h3{color:var(--navy)}.pack .p:nth-child(2) .dot{color:var(--primary)}
-.pack .p:nth-child(3){background:var(--lavender);color:var(--navy)}
-.pack .p:nth-child(3) h3{color:var(--navy)}.pack .p:nth-child(3) .dot{color:var(--surface-hi)}
+.pack .p:nth-child(3){background:var(--slate);color:var(--on-primary)}
+.pack .p:nth-child(3) h3{color:var(--on-primary)}.pack .p:nth-child(3) .dot{color:var(--tan)}
 .pack h3{font:400 52px/1 "Abril Fatface",serif;margin:0 0 12px;letter-spacing:-.01em}
 .pack p{margin:0;font-size:15px}
 .pack .num{position:absolute;top:14px;right:16px;font:700 13px "Space Mono",monospace;opacity:.7}
@@ -144,7 +145,7 @@ section{padding:72px 0}
 .rows dd{margin:0;color:var(--grey)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
 .chip{font:700 11px "Space Mono",monospace;padding:4px 10px;border-radius:999px;background:var(--navy);color:var(--surface)}
-.t-live{background:var(--yellow)}.t-ship{background:var(--primary-c)}.t-free{background:var(--lavender)}.t-wip{background:var(--surface)}
+.t-live{background:var(--tan)}.t-ship{background:var(--primary-c)}.t-free{background:var(--slate-c)}.t-wip{background:var(--surface)}
 .case.wide{grid-column:span 2}
 .subhead{font:400 clamp(28px,4vw,40px)/1.05 "Abril Fatface",serif;color:var(--navy);margin:56px 0 6px}
 .subhead .dot{color:var(--primary)}
@@ -152,10 +153,25 @@ section{padding:72px 0}
 .badge-row{display:flex;flex-wrap:wrap;gap:8px}
 .mini{font:700 12px "Space Mono",monospace;border:2px solid var(--navy);padding:3px 10px;border-radius:6px;background:var(--surface)}
 
+
+/* filing cabinet */
+.cabinet{background:var(--coffee);border:2px solid var(--navy);border-radius:12px;padding:0 14px 14px;box-shadow:6px 6px 0 var(--navy);margin-top:56px;position:relative}
+.drawer-tabs{display:flex;gap:8px;position:absolute;top:-44px;left:18px}
+.dtab{font:700 14px "Space Mono",monospace;text-transform:lowercase;padding:10px 18px 12px;border:2px solid var(--navy);border-bottom:none;border-radius:10px 10px 0 0;background:var(--tan-c);color:var(--navy);cursor:pointer}
+.dtab small{font-weight:400;opacity:.7;margin-left:6px}
+.dtab[aria-selected="true"]{background:var(--tan);padding-bottom:16px;margin-top:-4px}
+.dtab:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+.drawer{padding-top:14px}
+.front{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--tan);border:2px solid var(--navy);border-radius:8px;padding:12px 16px}
+.plate{font:700 13px "Space Mono",monospace;letter-spacing:.08em;background:var(--surface-hi);border:2px solid var(--navy);padding:4px 10px;border-radius:4px}
+.handle{width:110px;height:14px;border-radius:999px;background:var(--navy);box-shadow:inset 0 -3px 0 rgba(255,255,255,.18);flex-shrink:0}
+.shelf{background:var(--surface);border:2px solid var(--navy);border-top:none;border-radius:0 0 8px 8px;margin:0 10px;padding:22px 22px 28px}
+.shelf .files{margin-top:6px}
+@media (max-width:900px){.cabinet{padding:0 8px 8px}.shelf{margin:0 4px;padding:16px 12px 20px}.handle{width:60px}.plate{font-size:11px}.dtab{padding:8px 12px 10px;font-size:13px}}
 /* bench (in progress) */
 .bench{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.note{background:var(--yellow-c);border:2px solid var(--navy);padding:18px 18px 16px;box-shadow:var(--shadow);position:relative}
-.note:nth-child(2){background:var(--lavender-c)}
+.note{background:var(--tan-c);border:2px solid var(--navy);padding:18px 18px 16px;box-shadow:var(--shadow);position:relative}
+.note:nth-child(2){background:var(--slate-c)}
 .note:nth-child(3){background:var(--primary-c)}
 .note h4{margin:0 0 6px;font:400 24px "Abril Fatface",serif}
 .note p{margin:0;font-size:14px;color:var(--grey)}
@@ -165,7 +181,7 @@ section{padding:72px 0}
 .wins{background:var(--navy);color:var(--surface);border-top:2px solid var(--navy);border-bottom:2px solid var(--navy);position:relative;overflow:hidden}
 .wins .title{color:var(--surface)}
 .wins .lead{color:#bcc1cf}
-.ghost{position:absolute;right:-20px;top:18px;font:400 140px/.9 "Abril Fatface",serif;color:transparent;-webkit-text-stroke:1.4px rgba(227,194,110,.35);pointer-events:none;white-space:nowrap}
+.ghost{position:absolute;right:-20px;top:18px;font:400 140px/.9 "Abril Fatface",serif;color:transparent;-webkit-text-stroke:1.4px rgba(213,184,147,.35);pointer-events:none;white-space:nowrap}
 .stamps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative}
 .stamp{background:var(--surface);color:var(--navy);border:2px solid var(--navy);border-radius:14px;padding:22px;box-shadow:6px 6px 0 var(--navy);position:relative}
 .stamp b{display:block;font:400 52px/1 "Abril Fatface",serif;color:var(--primary)}
@@ -176,14 +192,14 @@ section{padding:72px 0}
 .tk{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;align-items:center}
 .cloud{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:6px 16px;padding:22px;background:var(--navy);border:2px solid var(--navy);border-radius:10px;color:var(--surface)}
 .cloud span{font-family:"Space Mono",monospace;line-height:1.2;transition:color .15s;cursor:default}
-.cloud span:hover{color:var(--yellow)}
+.cloud span:hover{color:var(--tan)}
 .w1{font-size:28px;font-weight:700}.w2{font-size:21px}.w3{font-size:16px;opacity:.9}.w4{font-size:13px;opacity:.7}
-.cloud .g{color:#c4bcdc}.cloud .o{color:#a8b5d6}.cloud .y{color:var(--yellow)}
+.cloud .g{color:#b9c6d6}.cloud .o{color:#e2c9a6}.cloud .y{color:var(--tan)}
 .legend{display:flex;flex-direction:column;gap:12px}
 .legend div{border-left:6px solid var(--navy);padding:4px 0 4px 12px}
 .legend div:nth-child(2){border-color:var(--primary)}
-.legend div:nth-child(3){border-color:var(--yellow)}
-.legend div:nth-child(4){border-color:var(--lavender)}
+.legend div:nth-child(3){border-color:var(--tan)}
+.legend div:nth-child(4){border-color:var(--slate)}
 .legend b{font:700 13px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.06em}
 .legend p{margin:2px 0 0;color:var(--grey);font-size:15px}
 
@@ -209,7 +225,7 @@ section{padding:72px 0}
 .contact h2{font:400 clamp(40px,7vw,88px)/.98 "Abril Fatface",serif;margin:0 0 14px}
 .contact p{max-width:34em;margin:0 auto 26px;font-size:18px}
 .contact .btn{background:var(--surface-hi)}
-.contact .btn.mustard{background:var(--yellow)}
+.contact .btn.mustard{background:var(--tan)}
 footer{background:var(--navy);color:var(--surface);font:12px "Space Mono",monospace;padding:16px 0}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
@@ -253,7 +269,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" stroke="#16213e" stroke-width="1.2" d="M12 1.5c.6 5.6 4.9 9.9 10.5 10.5-5.6.6-9.9 4.9-10.5 10.5C11.4 16.9 7.1 12.6 1.5 12 7.1 11.4 11.4 7.1 12 1.5z"/></symbol>
-  <symbol id="folder" viewBox="0 0 58 46"><path d="M2 8a4 4 0 0 1 4-4h14l5 5h27a4 4 0 0 1 4 4v27a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#e3c26e" stroke="#16213e" stroke-width="2.4"/><path d="M2 16h54v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#eedb9f" stroke="#16213e" stroke-width="2.4"/><rect x="18" y="20" width="22" height="8" rx="1.5" fill="#8fa0c8" stroke="#16213e" stroke-width="2"/></symbol>
+  <symbol id="folder" viewBox="0 0 58 46"><path d="M2 8a4 4 0 0 1 4-4h14l5 5h27a4 4 0 0 1 4 4v27a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#d5b893" stroke="#16213e" stroke-width="2.4"/><path d="M2 16h54v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#e6d3b3" stroke="#16213e" stroke-width="2.4"/><rect x="18" y="20" width="22" height="8" rx="1.5" fill="#617891" stroke="#16213e" stroke-width="2"/></symbol>
 </svg>
 
 <header class="topbar">
@@ -371,9 +387,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="win rv">
         <div class="titlebar"><span class="path">C:\MARIYAM\works</span><span class="ctl"><button class="m" aria-label="Minimise window">_</button><button class="x" aria-label="Close window">×</button></span></div>
         <div class="body">
-          <h2 class="title">case files<span class="dot">.</span></h2>
-          <p class="lead">Work for companies and clients first: the goal, what I built and my role. Company code stays private, so these are told in words.</p>
+          <h2 class="title">the filing cabinet<span class="dot">.</span></h2>
+          <p class="lead" style="margin-bottom:18px">Two drawers: the work I've shipped for companies and clients, and the products I build on my own.</p>
 
+          <div class="cabinet">
+            <div class="drawer-tabs" role="tablist" aria-label="Project drawers">
+              <button class="dtab" role="tab" id="tab-work" aria-controls="drawer-work" aria-selected="true">work <small>5 files</small></button>
+              <button class="dtab" role="tab" id="tab-personal" aria-controls="drawer-personal" aria-selected="false">personal <small>7 files</small></button>
+            </div>
+            <div class="drawer" id="drawer-work" role="tabpanel" aria-labelledby="tab-work">
+              <div class="front"><span class="plate">WORK · companies and clients</span><span class="handle" aria-hidden="true"></span></div>
+              <div class="shelf">
+                <p class="lead">The goal, what I built and my role. Company code stays private, so these are told in words.</p>
           <div class="files">
             <article class="case">
               <span class="tab t-ship">ShareMatch · shipped</span>
@@ -421,14 +446,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <article class="case">
               <span class="tab t-ship">Quicko (by Zerodha) · shipped</span>
               <div class="sheet">
-                <h3>100K accounts, zero lost</h3>
-                <p class="one">Moving a fintech's customer ledgers to a new database without dropping a record.</p>
+                <h3>Quicko Pro, end to end</h3>
+                <p class="one">Full-stack product work on a fintech platform, from how customers use it to how it runs in production.</p>
                 <dl class="rows">
-                  <div><dt>Goal</dt><dd>Migrate customer accounts, ledger balances and calendar records from DynamoDB to OpenSearch.</dd></div>
-                  <div><dt>Built</dt><dd>Python ETL pipelines, plus an LLM support assistant and 4 end-to-end product features.</dd></div>
-                  <div><dt>Result</dt><dd>100K+ records moved with zero data loss.</dd></div>
+                  <div><dt>Research</dt><dd>Studied how customers actually moved through the product, and shaped flows to feel intuitive before building them.</dd></div>
+                  <div><dt>Built</dt><dd>Membership and annual-plan features end to end, from the interface to Node.js services on AWS Lambda and Step Functions.</dd></div>
+                  <div><dt>Data</dt><dd>Worked with production customer data, including a zero-loss move of accounts and ledgers from DynamoDB to OpenSearch.</dd></div>
+                  <div><dt>Upgrade</dt><dd>Led the Angular 19 upgrade and moved the design system from Material 2 to Material 3 across customer and back-office apps.</dd></div>
                 </dl>
-                <div class="chips"><span class="chip">Python</span><span class="chip">DynamoDB</span><span class="chip">OpenSearch</span><span class="chip">AWS Lambda</span><span class="chip">Gemini</span></div>
+                <div class="chips"><span class="chip">Angular</span><span class="chip">Material 3</span><span class="chip">Node.js</span><span class="chip">AWS Lambda</span><span class="chip">Step Functions</span><span class="chip">DynamoDB</span><span class="chip">OpenSearch</span></div>
               </div>
             </article>
 
@@ -448,8 +474,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
           </div>
 
-          <h3 class="subhead">personal builds<span class="dot">.</span></h3>
-          <p class="lead">Products I design and code end to end, in the open.</p>
+              </div>
+            </div>
+            <div class="drawer" id="drawer-personal" role="tabpanel" aria-labelledby="tab-personal">
+              <div class="front"><span class="plate">PERSONAL · builds in the open</span><span class="handle" aria-hidden="true"></span></div>
+              <div class="shelf">
+                <p class="lead">Products I design and code end to end. Every one has a public repo.</p>
           <div class="files">
             <article class="case wide">
               <span class="tab t-live">Personal · job search</span>
@@ -520,6 +550,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
                 <div class="chips"><span class="chip">Python</span><span class="chip">Experiment design</span><span class="chip">Statistics</span><span class="chip">Evals</span></div>
                 <a class="more" href="https://github.com/mariyampangarkar19/modelbench">open the repo →</a>
               </div>
+              </div>
+            </div>
+          </div>
             </article>
           </div>
         </div>
@@ -595,7 +628,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <ol class="tl">
             <li><span class="when">2026 → now</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>The Staffing Factory <small>· freelance</small></h3><p>CRM, automations, ads plan, social content and design.</p></div></li>
             <li><span class="when">2025 → 26</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>ShareMatch <small>· Technical Analyst (AI and engineering)</small></h3><p>Led a team of 3. LLM agents, HAL-AI, the RAG assistant and the self-healing test builder.</p></div></li>
-            <li><span class="when">2024 → 25</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>Quicko (by Zerodha) <small>· Full Stack Developer</small></h3><p>Zero-loss migration of 100K+ accounts, an LLM support assistant, 4 end-to-end features.</p></div></li>
+            <li><span class="when">2024 → 25</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>Quicko (by Zerodha) <small>· Full Stack Developer</small></h3><p>Full-stack product work: memberships and annual plans, production data on AWS, and the Angular and Material 3 upgrade.</p></div></li>
             <li><span class="when">2024</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>Rising Financials <small>· Software Developer (contract)</small></h3><p>Real-time trade-data pipelines and client dashboards.</p></div></li>
             <li><span class="when">2023 → 24</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>Monocept <small>· Software Developer</small></h3><p>Insurance workflow APIs for ICICI, with 85%+ test coverage.</p></div></li>
             <li><span class="when">2023</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>DA-IICT <small>· B.Tech, Information and Communication Technology</small></h3><p>Where it started.</p></div></li>
@@ -627,6 +660,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   const el=document.getElementById('clock');
   function tick(){try{el.textContent='Dubai '+new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Dubai',hour:'2-digit',minute:'2-digit'})}catch(e){}}
   tick(); setInterval(tick,30000);
+})();
+// Filing cabinet drawers
+(function(){
+  const tabs=[...document.querySelectorAll('.dtab')];
+  function open(t){tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach((t,i)=>{t.addEventListener('click',()=>open(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];n.focus();open(n);}});});
+  if(tabs.length)open(tabs[0]);
 })();
 // Window buttons: minimise / close collapse the window body (click again to restore)
 document.querySelectorAll('.win').forEach(w=>{
