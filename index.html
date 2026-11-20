@@ -108,7 +108,7 @@ section{padding:72px 0}
 /* profile */
 .profile{display:grid;grid-template-columns:220px 1fr 280px;gap:34px;align-items:center}
 .avatar{width:200px;height:200px;border-radius:50%;border:2px solid var(--navy);background:var(--tan);box-shadow:var(--shadow);display:grid;place-items:center;font:400 84px "Abril Fatface",serif;color:var(--navy);position:relative}
-.avatar::after{content:"photo goes here";position:absolute;bottom:-14px;font:600 20px Caveat,cursive;color:var(--primary);background:var(--surface-hi);padding:0 6px}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
 .hi{font:700 22px Montserrat,sans-serif;margin:0}
 .big{font:400 clamp(38px,5vw,58px)/1 "Abril Fatface",serif;color:var(--primary);margin:2px 0 12px}
 .quote{font:600 26px/1.15 Caveat,cursive;color:var(--navy);margin:14px 0 0}
@@ -347,7 +347,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="titlebar"><span class="path">C:\MARIYAM\profile</span><span class="ctl"><button class="m" aria-label="Minimise window">_</button><button class="x" aria-label="Close window">×</button></span></div>
         <div class="body">
           <div class="profile">
-            <div class="avatar" role="img" aria-label="Monogram">MP</div>
+            <div class="avatar"><img src="img/mariyam.jpg" alt="Mariyam Pangarkar" width="200" height="200"></div>
             <div>
               <p class="hi">hi! i'm</p>
               <p class="big">Mariyam</p>
