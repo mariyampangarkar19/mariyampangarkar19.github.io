@@ -46,23 +46,23 @@ h1,h2,h3,h4,.name,.big,.title,.echo,.stamp b{text-transform:none}
 .icons{display:flex;flex-direction:column;gap:26px;padding-top:10px}
 .icon{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;font:700 12px "Space Mono",monospace;color:var(--navy)}
 .icon .ic{width:58px;height:52px;display:grid;place-items:center;transition:transform .15s}
-.icon:hover .ic{transform:translateY(-3px) rotate(-3deg)}
+.icon:hover .ic{transform:translateY(-3px)}
 .icon span{background:var(--surface-hi);padding:0 6px;border:1px solid transparent}
 .icon:focus-visible span,.icon:hover span{background:var(--navy);color:var(--surface)}
 .app{width:52px;height:52px;border-radius:12px;background:var(--navy);border:2px solid var(--navy);box-shadow:3px 3px 0 var(--navy);color:var(--surface);display:grid;place-items:center;font:28px "Abril Fatface",serif}
 
 .hero-center{text-align:center;position:relative;padding-top:10px}
-.kicker{display:inline-block;font:700 12px "Space Mono",monospace;letter-spacing:.12em;text-transform:uppercase;background:var(--navy);color:var(--surface);padding:4px 10px;transform:rotate(-1.5deg)}
+.kicker{display:inline-block;font:700 12px "Space Mono",monospace;letter-spacing:.12em;text-transform:uppercase;background:var(--navy);color:var(--surface);padding:4px 10px}
 .name{font:400 clamp(52px,10vw,124px)/.92 "Abril Fatface",serif;margin:18px 0 0;letter-spacing:-.01em;color:var(--navy)}
 .name .o{color:var(--primary)}
 .echo{font:400 clamp(30px,6vw,72px)/1 "Abril Fatface",serif;color:transparent;-webkit-text-stroke:1.4px var(--lavender);margin:0;user-select:none;white-space:nowrap;overflow:hidden}
 .echo:nth-of-type(2){opacity:.75}.echo:nth-of-type(3){opacity:.5}
 .tagline{font:600 clamp(18px,2.3vw,24px)/1.35 Montserrat,sans-serif;margin:18px auto 6px;max-width:30em}
 .tagline em{font-style:normal;background:var(--yellow);padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.hand{font:600 26px Caveat,cursive;color:var(--primary);transform:rotate(-3deg);display:inline-block;margin-top:6px}
+.hand{font:600 26px Caveat,cursive;color:var(--primary);display:inline-block;margin-top:6px}
 .sticker{position:absolute;font:700 12px/1.25 "Space Mono",monospace;text-align:center;border:2px solid var(--navy);box-shadow:var(--shadow);padding:10px 12px;background:var(--surface-hi)}
-.sticker.s1{top:10px;right:4%;transform:rotate(6deg);background:var(--yellow);border-radius:999px;padding:12px 16px}
-.sticker.s2{bottom:150px;left:0;transform:rotate(-7deg);background:var(--lavender)}
+.sticker.s1{top:10px;right:4%;background:var(--yellow);border-radius:999px;padding:12px 16px}
+.sticker.s2{bottom:150px;left:0;background:var(--lavender)}
 .star{position:absolute;width:26px;height:26px;color:var(--yellow)}
 .star svg{width:100%;height:100%;display:block}
 .cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:24px 0 30px}
@@ -107,25 +107,25 @@ section{padding:72px 0}
 /* profile */
 .profile{display:grid;grid-template-columns:220px 1fr 280px;gap:34px;align-items:center}
 .avatar{width:200px;height:200px;border-radius:50%;border:2px solid var(--navy);background:var(--yellow);box-shadow:var(--shadow);display:grid;place-items:center;font:400 84px "Abril Fatface",serif;color:var(--navy);position:relative}
-.avatar::after{content:"photo goes here";position:absolute;bottom:-14px;font:600 20px Caveat,cursive;color:var(--primary);background:var(--surface-hi);padding:0 6px;transform:rotate(-4deg)}
+.avatar::after{content:"photo goes here";position:absolute;bottom:-14px;font:600 20px Caveat,cursive;color:var(--primary);background:var(--surface-hi);padding:0 6px}
 .hi{font:700 22px Montserrat,sans-serif;margin:0}
 .big{font:400 clamp(38px,5vw,58px)/1 "Abril Fatface",serif;color:var(--primary);margin:2px 0 12px}
 .quote{font:600 26px/1.15 Caveat,cursive;color:var(--navy);margin:14px 0 0}
-.idcard{background:var(--surface);border:2px dashed var(--navy);padding:18px 18px 14px;font:13px/1.55 "Space Mono",monospace;position:relative;transform:rotate(1.2deg)}
+.idcard{background:var(--surface);border:2px dashed var(--navy);padding:18px 18px 14px;font:13px/1.55 "Space Mono",monospace;position:relative}
 .idcard h4{margin:0 0 8px;text-align:center;letter-spacing:.12em;font-size:14px}
 .idcard dl{margin:0}
 .idcard dt{font-weight:700;margin-top:8px}
 .idcard dd{margin:0;color:var(--grey);text-transform:lowercase}
-.tape{position:absolute;top:-12px;left:50%;width:90px;height:22px;background:rgba(227,194,110,.8);transform:translateX(-50%) rotate(-4deg)}
+.tape{position:absolute;top:-12px;left:50%;width:90px;height:22px;background:rgba(227,194,110,.8);transform:translateX(-50%)}
 
 /* package */
 .pack{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .pack .p{border:2px solid var(--navy);border-radius:10px;padding:22px;box-shadow:var(--shadow);position:relative}
-.pack .p:nth-child(1){background:var(--primary);color:var(--on-primary);transform:rotate(-1deg)}
+.pack .p:nth-child(1){background:var(--primary);color:var(--on-primary)}
 .pack .p:nth-child(1) h3{color:var(--on-primary)}.pack .p:nth-child(1) .dot{color:var(--yellow)}
-.pack .p:nth-child(2){background:var(--yellow);color:var(--navy);transform:rotate(.8deg)}
+.pack .p:nth-child(2){background:var(--yellow);color:var(--navy)}
 .pack .p:nth-child(2) h3{color:var(--navy)}.pack .p:nth-child(2) .dot{color:var(--primary)}
-.pack .p:nth-child(3){background:var(--lavender);color:var(--navy);transform:rotate(-.6deg)}
+.pack .p:nth-child(3){background:var(--lavender);color:var(--navy)}
 .pack .p:nth-child(3) h3{color:var(--navy)}.pack .p:nth-child(3) .dot{color:var(--surface-hi)}
 .pack h3{font:400 52px/1 "Abril Fatface",serif;margin:0 0 12px;letter-spacing:-.01em}
 .pack p{margin:0;font-size:15px}
@@ -153,9 +153,8 @@ section{padding:72px 0}
 /* bench (in progress) */
 .bench{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
 .note{background:var(--yellow-c);border:2px solid var(--navy);padding:18px 18px 16px;box-shadow:var(--shadow);position:relative}
-.note:nth-child(2){transform:rotate(1.4deg);background:var(--lavender-c)}
-.note:nth-child(1){transform:rotate(-1.2deg)}
-.note:nth-child(3){transform:rotate(.6deg);background:var(--primary-c)}
+.note:nth-child(2){background:var(--lavender-c)}
+.note:nth-child(3){background:var(--primary-c)}
 .note h4{margin:0 0 6px;font:400 24px "Abril Fatface",serif}
 .note p{margin:0;font-size:14px;color:var(--grey)}
 .note .pin{position:absolute;top:-9px;left:50%;width:16px;height:16px;border-radius:50%;background:var(--primary);border:2px solid var(--navy);transform:translateX(-50%)}
@@ -170,7 +169,6 @@ section{padding:72px 0}
 .stamp b{display:block;font:400 52px/1 "Abril Fatface",serif;color:var(--primary)}
 .stamp span{display:block;font-weight:600;margin-top:6px}
 .stamp small{display:block;font:12px "Space Mono",monospace;color:var(--grey);margin-top:6px}
-.stamp:nth-child(odd){transform:rotate(-1deg)}.stamp:nth-child(even){transform:rotate(1deg)}
 
 /* toolkit cloud */
 .tk{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;align-items:center}
@@ -569,7 +567,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 // Dubai clock in the top bar
 (function(){
   const el=document.getElementById('clock');
-  function tick(){try{el.textContent='Dubai '+new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Dubai',hour:'2-digit',minute:'2-digit'});}catch(e){}}
+  function tick(){try{el.textContent='Dubai '+new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Dubai',hour:'2-digit',minute:'2-digit'})}catch(e){}}
   tick(); setInterval(tick,30000);
 })();
 // Window buttons: minimise / close collapse the window body (click again to restore)
@@ -579,8 +577,8 @@ document.querySelectorAll('.win').forEach(w=>{
 // Reveal on scroll
 (function(){
   const els=document.querySelectorAll('.rv');
-  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(e=>e.classList.add('in'));return;}
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(e=>e.classList.add('in'));return}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
   els.forEach(e=>io.observe(e));
 })();
 </script>
