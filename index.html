@@ -146,6 +146,8 @@ section{padding:72px 0}
 .chip{font:700 11px "Space Mono",monospace;padding:4px 10px;border-radius:999px;background:var(--navy);color:var(--surface)}
 .t-live{background:var(--yellow)}.t-ship{background:var(--primary-c)}.t-free{background:var(--lavender)}.t-wip{background:var(--surface)}
 .case.wide{grid-column:span 2}
+.subhead{font:400 clamp(28px,4vw,40px)/1.05 "Abril Fatface",serif;color:var(--navy);margin:56px 0 6px}
+.subhead .dot{color:var(--primary)}
 .case a.more{font:700 13px "Space Mono",monospace;color:var(--primary)}
 .badge-row{display:flex;flex-wrap:wrap;gap:8px}
 .mini{font:700 12px "Space Mono",monospace;border:2px solid var(--navy);padding:3px 10px;border-radius:6px;background:var(--surface)}
@@ -370,7 +372,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="titlebar"><span class="path">C:\MARIYAM\works</span><span class="ctl"><button class="m" aria-label="Minimise window">_</button><button class="x" aria-label="Close window">×</button></span></div>
         <div class="body">
           <h2 class="title">case files<span class="dot">.</span></h2>
-          <p class="lead">The goal, what I built, my role, and what came out of it. Company code stays private, so these are told in words.</p>
+          <p class="lead">Work for companies and clients first: the goal, what I built and my role. Company code stays private, so these are told in words.</p>
 
           <div class="files">
             <article class="case">
@@ -430,7 +432,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
               </div>
             </article>
 
-            <article class="case">
+            <article class="case wide">
               <span class="tab t-free">Freelance · ongoing</span>
               <div class="sheet">
                 <h3>The Staffing Factory</h3>
@@ -444,25 +446,81 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
               </div>
             </article>
 
-            <article class="case">
-              <span class="tab t-live">Personal · live, daily use</span>
+          </div>
+
+          <h3 class="subhead">personal builds<span class="dot">.</span></h3>
+          <p class="lead">Products I design and code end to end, in the open.</p>
+          <div class="files">
+            <article class="case wide">
+              <span class="tab t-live">Personal · job search</span>
               <div class="sheet">
                 <h3>Trove</h3>
                 <p class="one">My own job-matching pipeline. It finds roles; I decide.</p>
-                <dl class="rows">
-                  <div><dt>Built</dt><dd>Scheduled runs score postings against a skills rubric, check each one is still live through the company's ATS API, and route it to "apply now" or "referral first".</dd></div>
-                  <div><dt>Design rule</dt><dd>It never applies or sends anything. A human reads every role and every draft.</dd></div>
-                </dl>
+                <dl class="rows"><div><dt>How</dt><dd>Scheduled runs score postings against a skills rubric, check each one is still live through the company's ATS API, and route it to "apply now" or "referral first".</dd></div><div><dt>Design rule</dt><dd>It never applies or sends anything. A human reads every role and every draft.</dd></div></dl>
                 <div class="chips"><span class="chip">Python</span><span class="chip">LLM sub-agents</span><span class="chip">ATS APIs</span><span class="chip">Google Sheets</span></div>
                 <a class="more" href="https://github.com/mariyampangarkar19/trove">open the repo →</a>
               </div>
             </article>
-          </div>
-
-          <div class="bench">
-            <div class="note"><span class="pin"></span><h4>Donna</h4><p>On the workbench: an assistant for paperwork and money. Answers over bills and contracts with page citations, and waits for approval before anything goes out.</p></div>
-            <div class="note"><span class="pin"></span><h4>The Morning Edition</h4><p>On the workbench: a team of agents that turns my newsletters into one newspaper-style edition each morning, with a fact-checker agent.</p></div>
-            <div class="note"><span class="pin"></span><h4>QueryPilot</h4><p>Up next: ask a question in plain English, get the SQL, the chart and an honest explanation of what the data does and doesn't say.</p></div>
+            <article class="case">
+              <span class="tab t-ship">Personal · data and AI</span>
+              <div class="sheet">
+                <h3>QueryPilot</h3>
+                <p class="one">Ask your database a question in plain English, get an answer you can trust.</p>
+                <dl class="rows"><div><dt>How</dt><dd>Finds the relevant tables, writes SQL, validates it, runs it read-only, repairs its own errors and picks the right chart.</dd></div><div><dt>The twist</dt><dd>Every sentence of the explanation is labelled as a fact, an interpretation or an unsupported claim.</dd></div><div><dt>Guardrail</dt><dd>A parser, not a prompt, allows only SELECT on known tables.</dd></div></dl>
+                <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Claude API</span><span class="chip">sqlglot</span><span class="chip">pgvector</span><span class="chip">Next.js</span></div>
+                <a class="more" href="https://github.com/mariyampangarkar19/querypilot">open the repo →</a>
+              </div>
+            </article>
+            <article class="case">
+              <span class="tab t-free">Personal · AI agent</span>
+              <div class="sheet">
+                <h3>Donna</h3>
+                <p class="one">A personal agent for paperwork and money, built for UAE life admin.</p>
+                <dl class="rows"><div><dt>How</dt><dd>Reads bills, receipts, leases and letters, tracks what's due, shows spending by category and answers questions with the page it found the answer on.</dd></div><div><dt>Guardrail</dt><dd>Drafts the email or dispute, then waits. Nothing is sent, paid or deleted without approval, and documents can't give it instructions.</dd></div></dl>
+                <div class="chips"><span class="chip">Claude API</span><span class="chip">Tool use</span><span class="chip">Vision</span><span class="chip">pgvector</span><span class="chip">FastAPI</span><span class="chip">Next.js</span></div>
+                <a class="more" href="https://github.com/mariyampangarkar19/donna">open the repo →</a>
+              </div>
+            </article>
+            <article class="case">
+              <span class="tab t-ship">Personal · automation</span>
+              <div class="sheet">
+                <h3>Backoffice Agents</h3>
+                <p class="one">Four AI agents that take repetitive admin off a small business.</p>
+                <dl class="rows"><div><dt>Agents</dt><dd>Inbox triage, lead enrichment, a WhatsApp assistant that books slots, and an invoice extractor that catches duplicates.</dd></div><div><dt>How</dt><dd>One shared platform: every tool is an MCP tool written once, every agent is a config file, and every action goes through an approval queue and audit log.</dd></div></dl>
+                <div class="chips"><span class="chip">MCP</span><span class="chip">Claude API</span><span class="chip">FastAPI</span><span class="chip">n8n</span><span class="chip">Postgres</span><span class="chip">Docker</span></div>
+                <a class="more" href="https://github.com/mariyampangarkar19/backoffice-agents">open the repo →</a>
+              </div>
+            </article>
+            <article class="case">
+              <span class="tab t-free">Personal · multi-agent</span>
+              <div class="sheet">
+                <h3>The Morning Edition</h3>
+                <p class="one">My newsletters, rewritten each morning as one newspaper.</p>
+                <dl class="rows"><div><dt>How</dt><dd>Agents collect and cluster the day's stories, section editors write in parallel, a fact-checker sends back anything unsupported, and an editor-in-chief lays out the front page.</dd></div><div><dt>Detail</dt><dd>Every claim links back to the newsletter it came from, and feedback tunes tomorrow's ranking.</dd></div></dl>
+                <div class="chips"><span class="chip">LangGraph</span><span class="chip">Claude API</span><span class="chip">Embeddings</span><span class="chip">GitHub Actions</span></div>
+                <a class="more" href="https://github.com/mariyampangarkar19/themorningedition">open the repo →</a>
+              </div>
+            </article>
+            <article class="case">
+              <span class="tab t-ship">Personal · data platform</span>
+              <div class="sheet">
+                <h3>ChainScope</h3>
+                <p class="one">Solana wallet intelligence, explained in plain language.</p>
+                <dl class="rows"><div><dt>How</dt><dd>Ingests and normalises wallet activity, profiles behaviour, maps who sent what to whom and flags volume spikes, peel chains and mixer-like patterns.</dd></div><div><dt>Detail</dt><dd>Counterparties are screened against sanctioned address lists, and every flag cites the transactions behind it.</dd></div></dl>
+                <div class="chips"><span class="chip">Python</span><span class="chip">Postgres</span><span class="chip">DuckDB</span><span class="chip">scikit-learn</span><span class="chip">Claude API</span><span class="chip">Next.js</span></div>
+                <a class="more" href="https://github.com/mariyampangarkar19/chainscope">open the repo →</a>
+              </div>
+            </article>
+            <article class="case">
+              <span class="tab t-free">Personal · research</span>
+              <div class="sheet">
+                <h3>ModelBench</h3>
+                <p class="one">Research on what actually makes LLM text-to-SQL reliable, and what it costs.</p>
+                <dl class="rows"><div><dt>How</dt><dd>A reproducible harness runs a grid of models, retrieval, validation and repair settings across seeds, then grades every run.</dd></div><div><dt>Output</dt><dd>Raw results, bootstrap confidence intervals, a failure taxonomy and a written report, regenerated with one command.</dd></div></dl>
+                <div class="chips"><span class="chip">Python</span><span class="chip">Experiment design</span><span class="chip">Statistics</span><span class="chip">Evals</span></div>
+                <a class="more" href="https://github.com/mariyampangarkar19/modelbench">open the repo →</a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
