@@ -111,7 +111,15 @@ section{padding:72px 0}
 .avatar img{width:100%;height:auto;border-radius:6px;display:block}
 .profile{align-items:start}
 .profile .avatar{margin-top:44px;z-index:1}
-.hello{position:relative;z-index:2;margin:6px 0 40px -40px;width:max-content;padding:4px 6px}
+.charm{position:absolute;z-index:3;pointer-events:none;filter:drop-shadow(2px 2px 0 rgba(37,52,79,.9))}
+.charm svg{width:100%;height:100%;display:block}
+.c-tape{top:-11px;left:50%;width:84px;height:20px;margin-left:-42px;background:rgba(213,184,147,.8);border-left:2px dashed rgba(37,52,79,.25);border-right:2px dashed rgba(37,52,79,.25);filter:none}
+.c-star{top:-18px;left:-18px;width:34px;height:34px;color:var(--tan)}
+.c-spark{top:44%;left:-16px;width:18px;height:18px;color:var(--slate)}
+.c-heart{bottom:34px;left:-16px;width:28px;height:28px}
+.c-code{bottom:-14px;right:-20px;font:700 13px/1 "Space Mono",monospace;background:var(--slate);color:var(--surface-hi);border:2px solid var(--navy);border-radius:999px;padding:6px 10px}
+.c-cup{bottom:-20px;left:30px;width:34px;height:30px}
+.hello{position:relative;z-index:2;margin:6px 0 62px -40px;width:max-content;padding:4px 6px}
 .hello::before{content:"";position:absolute;left:-46px;right:-46px;top:-30px;bottom:-30px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20160%22%20preserveAspectRatio%3D%22none%22%3E%3Cellipse%20cx%3D%22160%22%20cy%3D%2282%22%20rx%3D%22150%22%20ry%3D%2270%22%20fill%3D%22%23f1e6d4%22/%3E%3Cellipse%20cx%3D%22158%22%20cy%3D%2280%22%20rx%3D%22152%22%20ry%3D%2272%22%20fill%3D%22none%22%20stroke%3D%22%2325344f%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%22310%2014%20160%2010%20400%22/%3E%3Cellipse%20cx%3D%22163%22%20cy%3D%2283%22%20rx%3D%22148%22%20ry%3D%2269%22%20fill%3D%22none%22%20stroke%3D%22%2325344f%22%20stroke-opacity%3D%22.5%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%22220%2030%20300%2018%20200%22/%3E%3Cellipse%20cx%3D%22156%22%20cy%3D%2285%22%20rx%3D%22146%22%20ry%3D%2274%22%20fill%3D%22none%22%20stroke%3D%22%2325344f%22%20stroke-opacity%3D%22.22%22%20stroke-width%3D%221.1%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%22140%2040%20260%2060%22/%3E%3C/svg%3E") center/100% 100% no-repeat;z-index:-1}
 .hello .big{margin-bottom:0}
 .hi{font:700 22px Montserrat,sans-serif;margin:0}
@@ -254,7 +262,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .icons.right{order:3}
   .sticker{display:none}
   .profile{grid-template-columns:1fr;justify-items:center;text-align:center}
-  .profile .avatar{margin-top:0}.hello{margin:-34px auto 0}
+  .profile .avatar{margin-top:0}.hello{margin:-20px auto 52px}
   .idcard{width:100%;max-width:340px;text-align:left}
   .pack,.files,.bench,.stamps,.region{grid-template-columns:1fr}
   .case.wide{grid-column:auto}
@@ -358,7 +366,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="titlebar"><span class="path">C:\MARIYAM\profile</span><span class="ctl"><button class="m" aria-label="Minimise window">_</button><button class="x" aria-label="Close window">×</button></span></div>
         <div class="body">
           <div class="profile">
-            <div class="avatar"><img src="img/mariyam.jpg" alt="Mariyam Pangarkar" width="480" height="509"></div>
+            <div class="avatar"><img src="img/mariyam.jpg" alt="Mariyam Pangarkar" width="480" height="509"><span class="charm c-tape" aria-hidden="true"></span><span class="charm c-star" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><span class="charm c-heart" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z" fill="#632024" stroke="#25344f" stroke-width="1.6"/></svg></span><span class="charm c-spark" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><span class="charm c-code" aria-hidden="true">&lt;/&gt;</span><span class="charm c-cup" aria-hidden="true"><svg viewBox="0 0 28 24"><path d="M3 7h16v8a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6z" fill="#fbf8f2" stroke="#25344f" stroke-width="1.8"/><path d="M19 9h2.5a3 3 0 0 1 0 6H19" fill="none" stroke="#25344f" stroke-width="1.8"/><path d="M8 2.5c0 1.5 1.5 1.5 1.5 3M12.5 2.5c0 1.5 1.5 1.5 1.5 3" stroke="#6f4d38" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span></div>
             <div>
               <div class="hello"><p class="hi">hi! i'm</p>
               <p class="big">Mariyam</p></div>
