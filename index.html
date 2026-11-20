@@ -10,11 +10,11 @@
 <style>
 :root{
   /* material-style roles: primary blue, secondary yellow, tertiary lavender; navy + grey neutrals */
-  --surface:#f5f4fa; --surface-hi:#ffffff; --grid:#e2e0ec;
-  --navy:#16213e; --grey:#5f6577;
-  --primary:#3557d6; --on-primary:#ffffff; --primary-c:#dce3ff;
-  --yellow:#f7c948; --yellow-c:#fff3c4;
-  --lavender:#b8a6f0; --lavender-c:#ece7ff;
+  --surface:#f1f0f2; --surface-hi:#faf9f7; --grid:#e0dee4;
+  --navy:#26304a; --grey:#6c7080;
+  --primary:#5d74ad; --on-primary:#faf9f7; --primary-c:#dfe3ef;
+  --yellow:#e3c26e; --yellow-c:#f4ecd4;
+  --lavender:#b3a8d3; --lavender-c:#e9e5f1;
   --line:var(--navy); --shadow:4px 4px 0 var(--navy);
 }
 *{box-sizing:border-box}
@@ -78,7 +78,7 @@ h1,h2,h3,h4,.name,.big,.title,.echo,.stamp b{text-transform:none}
 .dock a{width:54px;height:54px;border-radius:12px;border:2px solid var(--navy);box-shadow:3px 3px 0 var(--navy);display:grid;place-items:center;text-decoration:none;transition:transform .15s}
 .dock a:hover{transform:translateY(-4px)}
 .dock svg{width:28px;height:28px}
-.d-li{background:#0a66c2}.d-gh{background:#2b2b2b}.d-mail{background:var(--primary)}.d-web{background:var(--yellow)}
+.d-li{background:#4d6a9c}.d-gh{background:#3a3f4c}.d-mail{background:var(--primary)}.d-web{background:var(--yellow)}
 
 /* marquee */
 .marquee{background:var(--navy);color:var(--surface);overflow:hidden;border-bottom:2px solid var(--navy)}
@@ -94,7 +94,7 @@ section{padding:72px 0}
 .titlebar .path{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .titlebar .ctl{display:flex;gap:6px;flex-shrink:0}
 .titlebar button{width:24px;height:22px;border:2px solid var(--navy);border-radius:5px;background:var(--surface);font:700 13px/1 "Space Mono",monospace;cursor:pointer;color:var(--navy);padding:0}
-.titlebar button.x{background:#e0675a;color:#fff}
+.titlebar button.x{background:#c98479;color:#fff}
 .win.min .body{display:none}
 .body{padding:34px}
 .title{font:400 clamp(34px,5vw,54px)/1.02 "Abril Fatface",serif;margin:0 0 8px;color:var(--navy)}
@@ -116,7 +116,7 @@ section{padding:72px 0}
 .idcard dl{margin:0}
 .idcard dt{font-weight:700;margin-top:8px}
 .idcard dd{margin:0;color:var(--grey);text-transform:lowercase}
-.tape{position:absolute;top:-12px;left:50%;width:90px;height:22px;background:rgba(247,201,72,.8);transform:translateX(-50%) rotate(-4deg)}
+.tape{position:absolute;top:-12px;left:50%;width:90px;height:22px;background:rgba(227,194,110,.8);transform:translateX(-50%) rotate(-4deg)}
 
 /* package */
 .pack{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -163,8 +163,8 @@ section{padding:72px 0}
 /* achievements */
 .wins{background:var(--navy);color:var(--surface);border-top:2px solid var(--navy);border-bottom:2px solid var(--navy);position:relative;overflow:hidden}
 .wins .title{color:var(--surface)}
-.wins .lead{color:#c3c9dc}
-.ghost{position:absolute;right:-20px;top:18px;font:400 140px/.9 "Abril Fatface",serif;color:transparent;-webkit-text-stroke:1.4px rgba(247,201,72,.35);pointer-events:none;white-space:nowrap}
+.wins .lead{color:#bcc1cf}
+.ghost{position:absolute;right:-20px;top:18px;font:400 140px/.9 "Abril Fatface",serif;color:transparent;-webkit-text-stroke:1.4px rgba(227,194,110,.35);pointer-events:none;white-space:nowrap}
 .stamps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative}
 .stamp{background:var(--surface);color:var(--navy);border:2px solid var(--navy);border-radius:14px;padding:22px;box-shadow:6px 6px 0 var(--navy);position:relative}
 .stamp b{display:block;font:400 52px/1 "Abril Fatface",serif;color:var(--primary)}
@@ -178,7 +178,7 @@ section{padding:72px 0}
 .cloud span{font-family:"Space Mono",monospace;line-height:1.2;transition:color .15s;cursor:default}
 .cloud span:hover{color:var(--yellow)}
 .w1{font-size:28px;font-weight:700}.w2{font-size:21px}.w3{font-size:16px;opacity:.9}.w4{font-size:13px;opacity:.7}
-.cloud .g{color:#c9b8ff}.cloud .o{color:#9fb4ff}.cloud .y{color:var(--yellow)}
+.cloud .g{color:#c4bcdc}.cloud .o{color:#a8b5d6}.cloud .y{color:var(--yellow)}
 .legend{display:flex;flex-direction:column;gap:12px}
 .legend div{border-left:6px solid var(--navy);padding:4px 0 4px 12px}
 .legend div:nth-child(2){border-color:var(--primary)}
@@ -253,7 +253,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" stroke="#16213e" stroke-width="1.2" d="M12 1.5c.6 5.6 4.9 9.9 10.5 10.5-5.6.6-9.9 4.9-10.5 10.5C11.4 16.9 7.1 12.6 1.5 12 7.1 11.4 11.4 7.1 12 1.5z"/></symbol>
-  <symbol id="folder" viewBox="0 0 58 46"><path d="M2 8a4 4 0 0 1 4-4h14l5 5h27a4 4 0 0 1 4 4v27a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#f2c94c" stroke="#16213e" stroke-width="2.4"/><path d="M2 16h54v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#f7dc7c" stroke="#16213e" stroke-width="2.4"/><rect x="18" y="20" width="22" height="8" rx="1.5" fill="#6f9fe0" stroke="#16213e" stroke-width="2"/></symbol>
+  <symbol id="folder" viewBox="0 0 58 46"><path d="M2 8a4 4 0 0 1 4-4h14l5 5h27a4 4 0 0 1 4 4v27a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#e3c26e" stroke="#16213e" stroke-width="2.4"/><path d="M2 16h54v24a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#eedb9f" stroke="#16213e" stroke-width="2.4"/><rect x="18" y="20" width="22" height="8" rx="1.5" fill="#8fa0c8" stroke="#16213e" stroke-width="2"/></symbol>
 </svg>
 
 <header class="topbar">
