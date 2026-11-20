@@ -186,6 +186,11 @@ section{padding:72px 0}
 .stamp{background:var(--surface);color:var(--navy);border:2px solid var(--navy);border-radius:14px;padding:22px;box-shadow:6px 6px 0 var(--navy);position:relative}
 .stamp b{display:block;font:400 52px/1 "Abril Fatface",serif;color:var(--primary)}
 .stamp span{display:block;font-weight:600;margin-top:6px}
+.stamps.words b{font-size:30px;line-height:1.1}
+.stamps+.subhead{margin-top:48px}
+.wins .subhead{color:var(--surface);font:400 30px/1.15 "Abril Fatface",serif;margin-bottom:22px}
+.wins .subhead .dot{color:var(--tan)}
+.stamp.ph{border-style:dashed;background:var(--tan-c)}
 .stamp small{display:block;font:12px "Space Mono",monospace;color:var(--grey);margin-top:6px}
 
 /* toolkit cloud */
@@ -276,7 +281,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap">
     <a class="brand" href="#top"><i></i>mariyam.os</a>
     <nav aria-label="Sections">
-      <a href="#profile">profile</a><a href="#works">works</a><a href="#wins">wins</a><a href="#toolkit">toolkit</a><a href="#contact">contact</a>
+      <a href="#profile">profile</a><a href="#works">works</a><a href="#wins">proof</a><a href="#toolkit">toolkit</a><a href="#contact">contact</a>
     </nav>
     <span class="clock" id="clock" aria-label="Time in Dubai">Dubai</span>
   </div>
@@ -289,7 +294,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="icons left">
           <a class="icon" href="#profile"><div class="ic"><div class="app">m</div></div><span>profile</span></a>
           <a class="icon" href="#works"><div class="ic"><svg width="58" height="46"><use href="#folder"/></svg></div><span>works</span></a>
-          <a class="icon" href="#wins"><div class="ic"><svg width="58" height="46"><use href="#folder"/></svg></div><span>wins</span></a>
+          <a class="icon" href="#wins"><div class="ic"><svg width="58" height="46"><use href="#folder"/></svg></div><span>proof</span></a>
         </div>
 
         <div class="hero-center">
@@ -562,17 +567,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
   <!-- WINS -->
   <section id="wins" class="wins">
-    <span class="ghost" aria-hidden="true">WINS WINS</span>
+    <span class="ghost" aria-hidden="true">PROOF PROOF</span>
     <div class="wrap">
-      <h2 class="title rv">receipts<span class="dot">.</span></h2>
-      <p class="lead rv">Numbers I can stand behind.</p>
+      <h2 class="title rv">trusted with<span class="dot">.</span></h2>
+      <p class="lead rv">What people handed me, and what I did with it.</p>
+      <div class="stamps words">
+        <div class="stamp rv"><b>Their customers' data</b><span>Moved live customer accounts to a new database without losing a record.</span><small>Quicko (by Zerodha)</small></div>
+        <div class="stamp rv"><b>A dev team</b><span>Led developers on a regulated, Shariah-compliant fintech.</span><small>ShareMatch</small></div>
+        <div class="stamp rv"><b>Traders’ questions</b><span>Built an AI analyst that talks to traders in English and Arabic.</span><small>ShareMatch</small></div>
+        <div class="stamp rv"><b>Their front door</b><span>Rebuilt the customer and back-office apps on Angular 19 and Material 3.</span><small>Quicko (by Zerodha)</small></div>
+        <div class="stamp rv"><b>Their clients' view</b><span>Built the dashboards the sales team put in front of clients.</span><small>Rising Financials</small></div>
+        <div class="stamp rv"><b>A whole brand</b><span>Ads, content, design, CRM and automation for one growing firm.</span><small>The Staffing Factory</small></div>
+      </div>
+      <h3 class="subhead rv">and the numbers that are mine to share<span class="dot">.</span></h3>
       <div class="stamps">
-        <div class="stamp rv"><b>100K+</b><span>accounts migrated, zero data loss</span><small>Quicko (by Zerodha)</small></div>
-        <div class="stamp rv"><b>40%</b><span>faster data retrieval from SQL tuning</span><small>Rising Financials</small></div>
-        <div class="stamp rv"><b>7%</b><span>sales lift helped by my client dashboards</span><small>Rising Financials</small></div>
-        <div class="stamp rv"><b>3</b><span>developers led on a regulated fintech</span><small>ShareMatch</small></div>
-        <div class="stamp rv"><b>2</b><span>languages my AI analyst speaks: English and Arabic</span><small>ShareMatch</small></div>
-        <div class="stamp rv"><b>85%+</b><span>test coverage on insurance workflow APIs for ICICI</span><small>Monocept</small></div>
+        <div class="stamp ph rv"><b>[n]</b><span>enquiries from the paid ads I planned</span><small>The Staffing Factory</small></div>
+        <div class="stamp ph rv"><b>[n]</b><span>growth in social reach or followers</span><small>The Staffing Factory</small></div>
+        <div class="stamp ph rv"><b>[n]</b><span>hours a week saved by the form-to-sheet automation</span><small>The Staffing Factory</small></div>
       </div>
     </div>
   </section>
@@ -630,7 +641,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <li><span class="when">2025 → 26</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>ShareMatch <small>· Technical Analyst (AI and engineering)</small></h3><p>Led a team of 3. LLM agents, HAL-AI, the RAG assistant and the self-healing test builder.</p></div></li>
             <li><span class="when">2024 → 25</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>Quicko (by Zerodha) <small>· Full Stack Developer</small></h3><p>Full-stack product work: memberships and annual plans, production data on AWS, and the Angular and Material 3 upgrade.</p></div></li>
             <li><span class="when">2024</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>Rising Financials <small>· Software Developer (contract)</small></h3><p>Real-time trade-data pipelines and client dashboards.</p></div></li>
-            <li><span class="when">2023 → 24</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>Monocept <small>· Software Developer</small></h3><p>Insurance workflow APIs for ICICI, with 85%+ test coverage.</p></div></li>
+            <li><span class="when">2023 → 24</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>Monocept <small>· Software Developer</small></h3><p>Insurance workflow APIs for ICICI, tested end to end before every release.</p></div></li>
             <li><span class="when">2023</span><span class="dot"><svg viewBox="0 0 24 24"><use href="#star"/></svg></span><div><h3>DA-IICT <small>· B.Tech, Information and Communication Technology</small></h3><p>Where it started.</p></div></li>
           </ol>
         </div>
