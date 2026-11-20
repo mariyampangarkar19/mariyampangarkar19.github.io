@@ -242,7 +242,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
 
 /* region */
 .region{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.region div{border:2px solid var(--navy);border-radius:10px;padding:18px;background:var(--surface-hi)}
+.region div{border:2px solid var(--navy);border-radius:10px;padding:18px;background:var(--surface-hi);box-shadow:5px 5px 0 -2px var(--surface-hi),5px 5px 0 0 var(--navy),10px 10px 0 -2px var(--tan-c),10px 10px 0 0 var(--navy)}
 .region b{display:block;font:400 22px/1.1 "Abril Fatface",serif;color:var(--navy);margin-bottom:6px}
 .region p{margin:0;font-size:14px;color:var(--grey)}
 
@@ -625,8 +625,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
 
       <div class="win rv">
-        <div class="titlebar"><span class="path">C:\MARIYAM\built_for_this_region</span><span class="ctl"><button class="m" aria-label="Minimise window">_</button><button class="x" aria-label="Close window">×</button></span></div>
+        <div class="titlebar"><span class="path">C:\MARIYAM\why_me.txt</span><span class="ctl"><button class="m" aria-label="Minimise window">_</button><button class="x" aria-label="Close window">×</button></span></div>
         <div class="body">
+<div class="aud aud-uae" hidden>
           <h2 class="title">built for here<span class="dot">.</span></h2>
           <p class="lead">I've already shipped for Gulf users, not just near them.</p>
           <div class="region">
@@ -634,6 +635,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <div><b>Shariah-aware</b><p>Compliance screening built into AI answers and trade flows.</p></div>
             <div><b>Regulated fintech</b><p>KYC, payments, wallets and settlement in production.</p></div>
             <div><b>Ready now</b><p>In Dubai on a UAE residence visa. Can start immediately.</p></div>
+          </div>
+          </div>
+          <div class="aud aud-gen">
+          <h2 class="title">what sets me apart<span class="dot">.</span></h2>
+          <p class="lead">The short version of why I'm a useful person to have on a team.</p>
+          <div class="region">
+            <div><b>Whole product, one person</b><p>Interface, frontend, backend, database and system design, so nothing waits on a handoff.</p></div>
+            <div><b>AI with guardrails</b><p>Grounded answers, clear limits and a human in the loop wherever it matters.</p></div>
+            <div><b>Speaks both sides</b><p>The bridge between the dev team and stakeholders, from requirements to release.</p></div>
+            <div><b>Builds and tells it</b><p>Ships the feature, then plans the ads, writes the content and designs the posts.</p></div>
+          </div>
           </div>
         </div>
       </div>
@@ -690,6 +702,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   tabs.forEach((t,i)=>{t.addEventListener('click',()=>open(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];n.focus();open(n);}});});
   if(tabs.length)open(tabs[0]);
 })();
+// Region-aware strip: UAE visitors (by device time zone, or ?for=uae) see the Gulf version
+try{var q=new URLSearchParams(location.search).get("for");var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||"");var uae=q?q==="uae":tz==="Asia/Dubai";if(uae){document.querySelector(".aud-uae").hidden=false;document.querySelector(".aud-gen").hidden=true;}}catch(e){}
 // Window buttons: minimise / close collapse the window body (click again to restore)
 document.querySelectorAll('.win').forEach(w=>{
   w.querySelectorAll('.titlebar button').forEach(b=>b.addEventListener('click',()=>w.classList.toggle('min')));
