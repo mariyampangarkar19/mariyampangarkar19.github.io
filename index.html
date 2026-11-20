@@ -107,12 +107,12 @@ section{padding:72px 0}
 
 /* profile */
 .profile{display:grid;grid-template-columns:220px 1fr 280px;gap:34px;align-items:center}
-.avatar{width:230px;padding:10px 10px 12px;background:var(--surface-hi);border:2px solid var(--navy);border-radius:10px;box-shadow:var(--shadow);position:relative}
+.avatar{width:230px;padding:10px 10px 12px;background:var(--surface-hi);border:2px solid var(--navy);border-radius:10px;box-shadow:5px 5px 0 -2px var(--surface-hi),5px 5px 0 0 var(--navy),10px 10px 0 -2px var(--tan-c),10px 10px 0 0 var(--navy);position:relative}
 .avatar img{width:100%;height:auto;border-radius:6px;display:block}
 .profile{align-items:start}
 .profile .avatar{margin-top:44px;z-index:1}
 .hello{position:relative;z-index:2;margin:6px 0 40px -40px;width:max-content;padding:4px 6px}
-.hello::before{content:"";position:absolute;left:-46px;right:-46px;top:-30px;bottom:-30px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20300%20150%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20points%3D%22290.0%2C75.0%20279.4%2C81.9%20286.5%2C89.7%20272.9%2C95.3%20276.1%2C103.6%20260.2%2C107.7%20259.5%2C116.2%20242.1%2C118.4%20237.3%2C126.6%20219.3%2C127.0%20210.7%2C134.5%20193.0%2C132.9%20181.2%2C139.3%20164.6%2C136.0%20150.0%2C141.0%20135.4%2C136.0%20118.8%2C139.3%20107.0%2C132.9%2089.3%2C134.5%2080.7%2C127.0%2062.7%2C126.6%2057.9%2C118.4%2040.5%2C116.2%2039.8%2C107.7%2023.9%2C103.6%2027.1%2C95.3%2013.5%2C89.7%2020.6%2C81.9%2010.0%2C75.0%2020.6%2C68.1%2013.5%2C60.3%2027.1%2C54.7%2023.9%2C46.4%2039.8%2C42.3%2040.5%2C33.8%2057.9%2C31.6%2062.7%2C23.4%2080.7%2C23.0%2089.3%2C15.5%20107.0%2C17.1%20118.8%2C10.7%20135.4%2C14.0%20150.0%2C9.0%20164.6%2C14.0%20181.2%2C10.7%20193.0%2C17.1%20210.7%2C15.5%20219.3%2C23.0%20237.3%2C23.4%20242.1%2C31.6%20259.5%2C33.8%20260.2%2C42.3%20276.1%2C46.4%20272.9%2C54.7%20286.5%2C60.3%20279.4%2C68.1%22%20fill%3D%22%23f1e6d4%22%20stroke%3D%22%2325344f%22%20stroke-width%3D%222.4%22%20stroke-linejoin%3D%22miter%22/%3E%3C/svg%3E") center/100% 100% no-repeat;z-index:-1}
+.hello::before{content:"";position:absolute;left:-46px;right:-46px;top:-30px;bottom:-30px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20160%22%20preserveAspectRatio%3D%22none%22%3E%3Cellipse%20cx%3D%22160%22%20cy%3D%2282%22%20rx%3D%22150%22%20ry%3D%2270%22%20fill%3D%22%23f1e6d4%22/%3E%3Cellipse%20cx%3D%22158%22%20cy%3D%2280%22%20rx%3D%22152%22%20ry%3D%2272%22%20fill%3D%22none%22%20stroke%3D%22%2325344f%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%22310%2014%20160%2010%20400%22/%3E%3Cellipse%20cx%3D%22163%22%20cy%3D%2283%22%20rx%3D%22148%22%20ry%3D%2269%22%20fill%3D%22none%22%20stroke%3D%22%2325344f%22%20stroke-opacity%3D%22.5%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%22220%2030%20300%2018%20200%22/%3E%3Cellipse%20cx%3D%22156%22%20cy%3D%2285%22%20rx%3D%22146%22%20ry%3D%2274%22%20fill%3D%22none%22%20stroke%3D%22%2325344f%22%20stroke-opacity%3D%22.22%22%20stroke-width%3D%221.1%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%22140%2040%20260%2060%22/%3E%3C/svg%3E") center/100% 100% no-repeat;z-index:-1}
 .hello .big{margin-bottom:0}
 .hi{font:700 22px Montserrat,sans-serif;margin:0}
 .big{font:400 clamp(38px,5vw,58px)/1 "Abril Fatface",serif;color:var(--primary);margin:2px 0 12px}
@@ -126,7 +126,7 @@ section{padding:72px 0}
 
 /* package */
 .pack{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.pack .p{border:2px solid var(--navy);border-radius:10px;padding:22px;box-shadow:var(--shadow);position:relative}
+.pack .p{border:2px solid var(--navy);border-radius:10px;padding:22px;box-shadow:5px 5px 0 -2px var(--tan-c),5px 5px 0 0 var(--navy),10px 10px 0 -2px var(--tan-c),10px 10px 0 0 var(--navy);position:relative}
 .pack .p:nth-child(1){background:var(--primary);color:var(--on-primary)}
 .pack .p:nth-child(1) h3{color:var(--on-primary)}.pack .p:nth-child(1) .dot{color:var(--tan)}
 .pack .p:nth-child(2){background:var(--tan);color:var(--navy)}
@@ -141,7 +141,7 @@ section{padding:72px 0}
 .files{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 26px;margin-top:10px}
 .case{position:relative;padding-top:26px}
 .case .tab{position:absolute;top:0;left:0;height:28px;padding:4px 14px 0;border:2px solid var(--navy);border-bottom:none;border-radius:8px 8px 0 0;font:700 13px/1 Montserrat,sans-serif;text-transform:lowercase;padding-top:7px}
-.case .sheet{border:2px solid var(--navy);border-radius:0 10px 10px 10px;background:var(--surface-hi);box-shadow:var(--shadow);padding:22px;height:100%;display:flex;flex-direction:column;gap:12px}
+.case .sheet{border:2px solid var(--navy);border-radius:0 10px 10px 10px;background:var(--surface-hi);box-shadow:5px 5px 0 -2px var(--surface-hi),5px 5px 0 0 var(--navy),10px 10px 0 -2px var(--tan-c),10px 10px 0 0 var(--navy);padding:22px;height:100%;display:flex;flex-direction:column;gap:12px}
 .case h3{font:italic 400 32px/1.08 "Playfair Display",serif;margin:0;color:var(--navy)}
 .case .one{font-weight:600;margin:0}
 .rows{font:14px/1.55 Montserrat,sans-serif;border-top:2px dotted var(--navy);margin:0}
@@ -159,6 +159,11 @@ section{padding:72px 0}
 .mini{font:700 12px "Space Mono",monospace;border:2px solid var(--navy);padding:3px 10px;border-radius:6px;background:var(--surface)}
 
 
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.10;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%22160%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.85%22%20numOctaves%3D%222%22%20stitchTiles%3D%22stitch%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%20.15%20%200%200%200%200%20.2%20%200%200%200%200%20.3%20%200%200%200%20.55%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22160%22%20height%3D%22160%22%20filter%3D%22url%28%23n%29%22/%3E%3C/svg%3E")}
+.chip{box-shadow:0 2px 0 rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.18)}
+.dtab{transition:transform .12s}.dtab:active{transform:translateY(2px)}
+.case .sheet{transition:transform .15s,box-shadow .15s}.case:hover .sheet{transform:translate(-2px,-2px)}
+.pack .p{transition:transform .15s}.pack .p:hover{transform:translate(-2px,-2px)}
 /* filing cabinet */
 .cabinet{background:var(--coffee);border:2px solid var(--navy);border-radius:12px;padding:0 14px 14px;box-shadow:6px 6px 0 var(--navy);margin-top:56px;position:relative}
 .drawer-tabs{display:flex;gap:8px;position:absolute;top:-44px;left:18px}
@@ -287,7 +292,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap">
     <a class="brand" href="#top"><i></i>mariyam.os</a>
     <nav aria-label="Sections">
-      <a href="#profile">profile</a><a href="#works">works</a><a href="#wins">proof</a><a href="#toolkit">toolkit</a><a href="#contact">contact</a>
+      <a href="#profile">profile</a><a href="#works">works</a><a href="#journey">journey</a><a href="#toolkit">toolkit</a><a href="#contact">contact</a>
     </nav>
     <span class="clock" id="clock" aria-label="Time in Dubai">Dubai</span>
   </div>
@@ -300,7 +305,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="icons left">
           <a class="icon" href="#profile"><div class="ic"><div class="app">m</div></div><span>profile</span></a>
           <a class="icon" href="#works"><div class="ic"><svg width="58" height="46"><use href="#folder"/></svg></div><span>works</span></a>
-          <a class="icon" href="#wins"><div class="ic"><svg width="58" height="46"><use href="#folder"/></svg></div><span>proof</span></a>
+          <a class="icon" href="#package"><div class="ic"><svg width="58" height="46"><use href="#folder"/></svg></div><span>package</span></a>
         </div>
 
         <div class="hero-center">
@@ -377,7 +382,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         </div>
       </div>
 
-      <div class="win rv">
+      <div class="win rv" id="package">
         <div class="titlebar"><span class="path">C:\MARIYAM\the_full_package.txt</span><span class="ctl"><button class="m" aria-label="Minimise window">_</button><button class="x" aria-label="Close window">×</button></span></div>
         <div class="body">
           <h2 class="title">three hires, one person<span class="dot">.</span></h2>
@@ -398,7 +403,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="win rv">
         <div class="titlebar"><span class="path">C:\MARIYAM\works</span><span class="ctl"><button class="m" aria-label="Minimise window">_</button><button class="x" aria-label="Close window">×</button></span></div>
         <div class="body">
-          <h2 class="title">the filing cabinet<span class="dot">.</span></h2>
+          <h2 class="title">here are my files<span class="dot">.</span></h2>
           <p class="lead" style="margin-bottom:18px">Two drawers: the work I've shipped for companies and clients, and the products I build on my own.</p>
 
           <div class="cabinet">
@@ -571,30 +576,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 
-  <!-- WINS -->
-  <section id="wins" class="wins">
-    <span class="ghost" aria-hidden="true">PROOF PROOF</span>
-    <div class="wrap">
-      <h2 class="title rv">trusted with<span class="dot">.</span></h2>
-      <p class="lead rv">What people handed me, and what I did with it.</p>
-      <div class="stamps words">
-        <div class="stamp rv"><b>Their customers' data</b><span>Moved live customer accounts to a new database without losing a record.</span><small>Quicko (by Zerodha)</small></div>
-        <div class="stamp rv"><b>A dev team</b><span>Led developers on a regulated, Shariah-compliant fintech.</span><small>ShareMatch</small></div>
-        <div class="stamp rv"><b>Traders’ questions</b><span>Built an AI analyst that talks to traders in English and Arabic.</span><small>ShareMatch</small></div>
-        <div class="stamp rv"><b>Their front door</b><span>Rebuilt the customer and back-office apps on Angular 19 and Material 3.</span><small>Quicko (by Zerodha)</small></div>
-        <div class="stamp rv"><b>Their clients' view</b><span>Built the dashboards the sales team put in front of clients.</span><small>Rising Financials</small></div>
-        <div class="stamp rv"><b>A whole brand</b><span>Ads, content, design, CRM and automation for one growing firm.</span><small>The Staffing Factory</small></div>
-      </div>
-      <h3 class="subhead rv">and the numbers that are mine to share<span class="dot">.</span></h3>
-      <div class="stamps">
-        <div class="stamp ph rv"><b>[n]</b><span>enquiries from the paid ads I planned</span><small>The Staffing Factory</small></div>
-        <div class="stamp ph rv"><b>[n]</b><span>growth in social reach or followers</span><small>The Staffing Factory</small></div>
-        <div class="stamp ph rv"><b>[n]</b><span>hours a week saved by the form-to-sheet automation</span><small>The Staffing Factory</small></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOOLKIT + REGION -->
+    <!-- TOOLKIT + REGION -->
   <section id="toolkit" class="gridbg">
     <div class="wrap">
       <div class="win rv">
